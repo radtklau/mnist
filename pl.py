@@ -90,7 +90,7 @@ def cnn(X_train, X_test, X_validation, y_train, y_test, y_validation, num_classe
                 loss='sparse_categorical_crossentropy',
                 metrics=['accuracy'])
     
-    history = model.fit(X_train, y_train, epochs=5, validation_data=(X_validation, y_validation))
+    history = model.fit(X_train, y_train, epochs=20, validation_data=(X_validation, y_validation))
     
     plt.plot(history.history['accuracy'], label='Training Accuracy')
     plt.plot(history.history['val_accuracy'], label='Validation Accuracy')
